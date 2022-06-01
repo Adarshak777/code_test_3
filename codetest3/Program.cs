@@ -42,13 +42,14 @@ using System.Data.SqlClient;namespace CodebaseTest3
                 }
                 else
                 {
-                    Console.WriteLine(" Something went wrong");
+                    Console.WriteLine(" Something went wrong ");
                 }
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+           
         }
         public static void DisplayAllEmployee()
         {
@@ -66,6 +67,7 @@ using System.Data.SqlClient;namespace CodebaseTest3
             insertEmployee();
             DisplayAllEmployee();
             Console.Read();
+            con.Close();
         }
     }
 }
